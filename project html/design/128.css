@@ -1,0 +1,422 @@
+/* css Zen Garden submission 128 - 'Dragen', by Matthew Buchanan, http://www.cactuslab.com/ */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* All associated graphics copyright 2004, Matthew Buchanan */
+/* Added: Oct. 21st, 2004 */
+
+/* IMPORTANT */
+/* This design is not a template. You may not reproduce it elsewhere without the 
+   designer's written permission. However, feel free to study the CSS and use 
+   techniques you learn from it elsewhere. */
+
+
+/*
+	Makes use of Alternate Box Model Hacks as described by Edwardson Tan:
+	http://www.info.com.ph/~etan/w3pantheon/style/abmh.html
+
+	Makes use of Phark Revisited image replacement as described by Dave Shea:
+	http://www.mezzoblue.com/tests/revised-image-replacement/
+
+	Tested and 100% compatible with:
+	Internet Explorer 5.01+ (Win)
+	Firefox 0.9.3 (Win)
+	Opera 7.5.3 (Win)
+	Safari 1.2.3 (Mac)
+	Netscape 7.1 (Mac)
+
+	Very minor issue found with:
+	Internet Explorer 5.2.3 (Mac)
+
+	Toy Dragon image by Maartje van Caspel, via iStockPhoto.com
+	http://www.vancaspelenvdr.nl/portfolio/
+	http://www.istockphoto.com/user_view.php?id=127925
+*/	
+
+/* Document Styles */
+
+body {
+	background: #4f6696;
+	font: normal 10px/16px "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, sans-serif;
+	color: #f5f3f3;
+	margin: 15px;
+	text-align: center; /* For IE */
+	}
+
+p {
+	margin: 0 0 5px 0;
+	}
+
+p:nth-child(2) {
+	font-size: 13px;
+	line-height: 20px;
+	}
+
+h3 {
+	color: rgb(247, 17, 5);
+	font-size: 10px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 30px 0 2px 0;
+	}
+
+a:link, a:visited {
+	color: rgba(76, 212, 3, 0.986);
+	text-decoration: none;
+	}
+
+a:hover, a:active {
+	color: #fff;
+	background: #9c0;
+	}
+
+ul {
+	margin: 0;
+	padding: 0 23px 10px 27px;
+	list-style: none;
+	line-height: 1.2em;
+	}
+
+li {
+	padding-bottom: 7px;
+	}
+
+abbr {
+	font-style: normal;
+	border-bottom: 1px dotted #666;
+	}
+
+/* Container Styles */
+
+.page-wrapper {
+	position: relative;
+	width: 720px !important;
+	width /**/: 750px;
+	background: #fff url(/image/title.png) repeat-y;
+	border: 15px solid #fff;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left; /* For IE, see above */
+	}
+
+/* Intro Styles */
+
+header {
+	width: 720px;
+	height: 220px;
+	background: #18d url(/image/dragon.jpg) no-repeat;
+	background-size: cover; /* makes the image cover the header */
+  position: relative; /* so you can position text absolutely if needed */
+  color: white; /* text color */
+  text-align: center; /* centers text horizontally */
+	}
+
+header h1, header h2 {
+	 padding-top: 60px; /* space from top of header */
+  text-shadow: 2px 2px 4px black; /* makes text readable on image */
+  margin: 0;
+	}
+
+
+.summary {
+	width: 720px;
+	height: 39px;
+	border-top: 1px solid #fff;
+	background: rgb(4, 119, 79);
+	}
+.summary p:first-child {
+	position: absolute;
+	left: -999em;
+	}
+
+.summary p:last-child {
+	width: 141px !important;
+	width /**/: 168px;
+	height: 33px !important;
+	height /**/: 44px;
+	color: rgb(7, 240, 34);
+	margin: 0;
+	padding: 6px 107px 0 27px;
+	border-right: 1px solid #fff;
+	font-size: 11px;
+	line-height: 1.2;
+	}
+
+.summary a:link, .summary a:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #f105b6;
+	}
+
+.summary a:hover, .summary a:active {
+	text-decoration: underline;
+	background: transparent;
+	}
+
+/* Supporting Text Styles */
+
+.preamble, .explanation, .participation, .benefits, .requirements {
+	margin: 0 50px 0 320px;
+	}
+
+footer {
+	width: 708px !important;
+	width /**/: 720px;
+	height: 24px !important;
+	height /**/: 30px;
+	background: #18d;
+	margin-top: 15px;
+	padding: 6px 12px 0 0;
+	border-top: 1px solid #fff;
+	text-align: right;
+	}
+
+footer a:link, footer a:visited {
+	text-transform: uppercase;
+	color: #fff;
+	}
+
+footer a:hover, footer a:active {
+	color: #18d;
+	background: #fff;
+	}
+
+/* Link List Styles */
+
+.sidebar {
+	position: absolute;
+	top: 260px;
+	left: 0px;
+	width: 275px;
+	border-bottom: 1px solid #d56161;
+	}
+
+.sidebar h3 {
+	text-indent: -1100px;
+	height: 45px;
+	margin: 0;
+	}
+
+.sidebar a:link, .sidebar a:visited {
+	font-size: 11px;
+	color: #fcf9f9;
+	}
+
+.sidebar a:hover, .sidebar a:active {
+	background: #110b0b;
+	}
+
+.sidebar a.designer-name {
+	font-size: 10px;
+	}
+
+.sidebar abbr {
+	border-bottom: none;
+	}
+
+.design-selection, #lfavorites {
+	border-top: 1px solid #fff;
+	background: rgb(4, 195, 58);
+	}
+
+.design-selection h3 {
+	background: url(/image/select.gif);
+	}
+
+#lfavorites h3 {
+	background: url(favourites.gif);
+	}
+
+.design-selection li, #lfavorites li {
+	color: rgb(3, 3, 2);
+	background: url(/image/majestic-dragon-soars-stockcake.webp) repeat-x left bottom;
+	}
+
+.design-selection a:hover, .design-selection a:active, #lfavorites a:hover, #lfavorites a:active {
+	color: #18d;
+	}
+
+.design-archives {
+	border-top: 1px solid #fff;
+	background: rgb(66, 75, 40);
+	}
+
+.design-archives h3 {
+	background: url(/image/archives.gif);
+	}
+
+.design-archives li {
+	color: #cf3;
+	background: url(/image/images.jpg) repeat-x left bottom;
+	}
+
+.design-archives a:hover, .design-archives a:active {
+	color: #9c0;
+	}
+
+.zen-resources {
+	border-top: 1px solid #fff;
+	background: rgb(219, 38, 167);
+	}
+
+.zen-resources h3 {
+	background: url(/image/resources.gif);
+	}
+
+.zen-resources li {
+	color: #fcc;
+	background: url(/image/majestic-dragon-soars-stockcake.webp) repeat-x left bottom;
+	}
+
+.zen-resources a:hover, .zen-resources a:active {
+	color: #d8c;
+	}
+
+
+
+
+
+
+	.extra1, .extra2, .extra3, .extra4, .extra5, .extra6{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(6px);
+}
+
+/* Different colors and positions */
+.extra1{
+    background: #ff0000;
+    top: 50px;
+    left: 100px;
+}
+
+.extra2{
+    background: #ff9900;
+    top: 120px;
+    left: 200px;
+}
+
+.extra3{
+    background: #ffd700;
+    top: 30px;
+    left: 350px;
+}
+
+.extra4{
+    background: #00ccff;
+    top: 150px;
+    left: 450px;
+}
+
+.extra5{
+    background: #9900cc;
+    top: 80px;
+    left: 550px;
+}
+
+.extra6{
+    background: #33cc33;
+    top: 160px;
+    left: 650px;
+}
+.extra1, .extra2, .extra3, .extra4, .extra5, .extra6{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(6px);
+    animation: float 4s infinite ease-in-out;
+}
+
+/* Colors and position */
+.extra1{
+    background: #ff0000;
+    top: 50px;
+    left: 100px;
+}
+
+.extra2{
+    background: #ff9900;
+    top: 120px;
+    left: 200px;
+}
+
+.extra3{
+    background: #ffd700;
+    top: 30px;
+    left: 350px;
+}
+
+.extra4{
+    background: #00ccff;
+    top: 150px;
+    left: 450px;
+}
+
+.extra5{
+    background: #9900cc;
+    top: 80px;
+    left: 550px;
+}
+
+.extra6{
+    background: #33cc33;
+    top: 160px;
+    left: 650px;
+}
+
+/* Floating animation */
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.extra1:hover,
+.extra2:hover,
+.extra3:hover,
+.extra4:hover,
+.extra5:hover,
+.extra6:hover{
+    transform: scale(1.1);
+}
+.extra1, .extra2, .extra3, .extra4, .extra5, .extra6{
+    width: 60px;
+    height: 20px;
+    display: inline-block;
+    margin: 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Gradient colors */
+.extra1{
+    background: linear-gradient(to right, red, orange);
+}
+
+.extra2{
+    background: linear-gradient(to right, orange, yellow);
+}
+
+.extra3{
+    background: linear-gradient(to right, yellow, gold);
+}
+
+.extra4{
+    background: linear-gradient(to right, blue, cyan);
+}
+
+.extra5{
+    background: linear-gradient(to right, purple, violet);
+}
+
+.extra6{
+    background: linear-gradient(to right, green, lime);
+}
